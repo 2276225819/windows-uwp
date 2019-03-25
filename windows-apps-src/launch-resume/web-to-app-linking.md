@@ -28,6 +28,10 @@ Your app needs to identify the URIs for the websites it will handle. To do so, a
 For example, if your website’s address is “msn.com” you would make the following entry in your app’s manifest:
 
 ```xml
+
+<Package
+   ...
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3">
 <Applications>
   <Application ... >
       ...
@@ -40,6 +44,7 @@ For example, if your website’s address is “msn.com” you would make the fol
       </Extensions>
   </Application>
 </Applications>
+</Package>
 ```
 
 The declaration above registers your app to handle links from the specified host. If your website has multiple addresses (for example: m.example.com, www.example.com, and example.com) then add a separate `<uap3:Host Name=... />` entry inside of the `<uap3:AppUriHandler>` for each address.
